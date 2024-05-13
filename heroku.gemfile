@@ -1,0 +1,37 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+ruby '3.0.3'
+
+gem 'thredded', path: File.dirname(__FILE__)
+
+gem 'mustache'
+
+gem 'rails', '~> 7.0.0'
+gem 'rails-i18n', '~> 7.0.0'
+
+gem 'webpacker', '~> 5.0'
+
+# Make these gems available in production
+gem 'puma'
+gem 'pg'
+gem 'rails_email_preview', '>= 2.2.1'
+gem 'roadie-rails'
+gem 'turbolinks'
+gem 'kaminari-i18n'
+gem 'http_accept_language'
+gem 'factory_bot'
+gem 'faker', '>= 1.6.2'
+gem 'twemoji'
+
+gem 'thredded-markdown_coderay'
+gem 'thredded-markdown_katex'
+
+gem 'katex', '>= 0.4.0'
+
+# Heroku-specific gems
+gem 'newrelic_rpm'
+gem 'rollbar'
+gem 'rack-canonical-host'
+gem 'dalli'
+gem 'tunemygc'

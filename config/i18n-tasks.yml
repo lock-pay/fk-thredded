@@ -1,0 +1,22 @@
+# i18n-tasks finds and manages missing and unused translations
+# See https://github.com/glebm/i18n-tasks/blob/main/templates/config/i18n-tasks.yml
+
+# Do not consider these keys missing:
+ignore_missing:
+# The kaminari gem keys
+- views.pagination.*
+
+search:
+  paths:
+    - app/
+    - lib/
+    - spec/dummy/app/
+data:
+  yaml:
+    write:
+      line_width: 110
+
+## Exclude these keys from the `i18n-tasks check-consistent-interpolations` report:
+ignore_inconsistent_interpolations:
+- 'thredded.users.posts_count.one'
+- 'thredded.users.started_topics_count.one'

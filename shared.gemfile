@@ -1,0 +1,35 @@
+# frozen_string_literal: true
+
+gem 'test_after_commit', group: :test
+gem 'capybara-screenshot', group: :test
+
+group :debug do
+  gem 'derailed'
+  gem 'pry-rails'
+  gem 'rack-mini-profiler'
+
+  platform :mri do
+    gem 'byebug'
+    gem 'flamegraph'
+    gem 'stackprof'
+  end
+end
+
+if ENV['THREDDED_USE_GUARD']
+  group :development do
+    gem 'guard'
+    gem 'guard-livereload'
+    gem 'guard-rails'
+  end
+end
+
+group :test do
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+end
+
+gem 'db_text_search', github: 'thredded/db_text_search', branch: 'main'
+gem 'thredded-markdown_coderay', git: 'https://github.com/thredded/thredded-markdown_coderay', branch: 'main'
+gem 'thredded-markdown_katex', git: 'https://github.com/thredded/thredded-markdown_katex', branch: 'main'
+
+gem 'roadie-rails'
